@@ -1,0 +1,17 @@
+server side events := 1. Connection
+                      2. Disconnection
+                      3. Message
+                      4. Reconnect
+                      5. Ping
+                      6. Join
+                      7. Leave
+
+Client side events := 1. Connect
+                      2. Connect_error
+                      3. Connect_timeout
+                      4. Reconnect, ...
+
+2 cases are occured := 
+1. Custom events create on server side and catch on client side.
+2. Custom events create on client side and catch on server side.
+
