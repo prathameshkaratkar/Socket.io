@@ -13,21 +13,35 @@ app.get('/',function(req,res){
     res.sendFile(filename,options);
 })
 
+let users = 0;
+
+
 io.on('connection',function(socket){
     console.log('a user connected');
+    users++;
+    // io.sockets.emit('broadcast',{message: users + "users connected"})  // for all users showing messages
 
-    setTimeout(function(){
-        socket.emit('myCustomEvent',{description: "A custom message from the sever side!"})
-    },3000)
+    socket.emit('newuserconnect',{message: " Hi, Welcome Dear"});   // for users who are connected 
+    socket.broadcast.emit('newuserconnect',{message: users + "users connected"});
 
 
-    // Events catching on server side
-    socket.on('myCustomEvent2', function(data) {
-        console.log(data.description);
-    })
+
+
+    // setTimeout(function(){
+    //     socket.emit('myCustomEvent',{description: "A custom message from the sever side!"})
+    // },3000)
+
+
+    // // Events catching on server side
+    // socket.on('myCustomEvent2', function(data) {
+    //     console.log(data.description);
+    // })
 
     socket.on('disconnect',function(){
         console.log('a user disconnected');
+        users--;
+        //io.sockets.emit('broadcast',{message: users + ' users connected!'})
+        io.socket.emit('broadcast',{message: users + " users connected!"})
     });
 })
 

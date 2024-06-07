@@ -12,12 +12,18 @@
     <script>
         const socket = io();
 
-        //Events catching on client side 
-        socket.on('myCustomEvent',function(data) {
-            document.write(data.description)
+        socket.on('newuserconnect', function(data){
+            document.body.innerHTML = '';
+            document.write(data.message)
         })
 
-        socket.emit('myCustomEvent2',{description: 'A custom message from client side'})
+
+        //Events catching on client side 
+        // socket.on('myCustomEvent',function(data) {
+        //     document.write(data.description)
+        // })
+
+        // socket.emit('myCustomEvent2',{description: 'A custom message from client side'})
     </script>
 
 </body>

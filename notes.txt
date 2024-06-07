@@ -15,3 +15,36 @@ Client side events := 1. Connect
 1. Custom events create on server side and catch on client side.
 2. Custom events create on client side and catch on server side.
 
+
+3. Broadcasting -  messages send to the connected users with socket.io 
+    a) users can see how many user connected.
+    b) if user connect, then we will show a a welcome message to user, and other users can see how many user connected.
+
+
+
+
+
+
+
+// Here are 20 questions related to socket.io with Node.js
+
+1. What is socket.io and what problem does it solve in the context of Node.js?
+2. How do you install socket.io in a Node.js project?
+3. What is the role of WebSockets in socket.io?
+4. Can socket.io be used with other transport protocols besides WebSockets? If so, how?
+5. How do you create a socket.io server in Node.js?
+6. How do clients connect to a socket.io server?
+7. What are the typical events emitted by socket.io?
+8. How do you handle incoming events on the server-side with socket.io?
+9. How do you send messages from the server to the client with socket.io?
+10. How do you broadcast messages to all connected clients with socket.io?
+11. What is the difference between `io.emit()` and `socket.broadcast.emit()`?
+12. How do you handle disconnections in socket.io?
+13. Can you explain the concept of namespaces in socket.io?
+14. How do you create and use namespaces in socket.io?
+15. What is the purpose of rooms in socket.io?
+16. How do you create and manage rooms in socket.io?
+17. Can you explain the concept of middleware in socket.io?
+18. How do you use middleware in socket.io?
+19. How does socket.io handle scalability and load balancing in a Node.js application?
+20. Can you provide an example of a real-world use case for socket.io in a Node.js application?
