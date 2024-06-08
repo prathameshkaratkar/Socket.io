@@ -22,7 +22,7 @@ io.on('connection',function(socket){
     // io.sockets.emit('broadcast',{message: users + "users connected"})  // for all users showing messages
 
     socket.emit('newuserconnect',{message: " Hi, Welcome Dear"});   // for users who are connected 
-    socket.broadcast.emit('newuserconnect',{message: users + "users connected"});
+    socket.broadcast.emit('newuserconnect',{message: users + "users connected"});   // showing all users except those who are run as a user
 
 
 
