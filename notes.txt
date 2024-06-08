@@ -48,3 +48,17 @@ Client side events := 1. Connect
 18. How do you use middleware in socket.io?
 19. How does socket.io handle scalability and load balancing in a Node.js application?
 20. Can you provide an example of a real-world use case for socket.io in a Node.js application?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
